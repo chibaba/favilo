@@ -15,7 +15,6 @@ import static javax.persistence.GenerationType.IDENTITY;
 
 @Data
 @NoArgsConstructor
-@Builder
 @Entity
 public class Comment {
     @Id
