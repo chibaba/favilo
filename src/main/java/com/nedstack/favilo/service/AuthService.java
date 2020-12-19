@@ -37,12 +37,12 @@ public class AuthService {
         user.setEnabled(false);
         userRepository.save(user);
 
-        String token =   generateVerificationToken(user);
+        String token = generateVerificationToken( user);
     }
     private void generateVerificationToken(User user) {
-        String verification  = UUID.randomUUID().toString();
+        String token  = UUID.randomUUID().toString();
         VerificationToken verificationToken = new VerificationToken();
-        verificationToken.setToken(token);
+         verificationToken.setToken(token);
         verificationToken.setUser(user);
 
         verificationTokenRepository.save(verificationToken);
